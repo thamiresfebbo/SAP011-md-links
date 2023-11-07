@@ -4,9 +4,9 @@ function soma(a, b){
   return a +b;
 }
 
-function lerArquivo(caminhoDoArquivo){
+function lerArquivo(caminhodoArquivo){
  return new Promise(function (resolve, reject){
-  fs.readFile(caminhoDoArquivo, 'utf8', (err, data) =>{
+  fs.readFile(caminhodoArquivo, 'utf8', (err, data) =>{
     if (err) reject(err);
 
    resolve(data);
