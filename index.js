@@ -19,7 +19,7 @@ function mdLinks(caminhoDoArquivo) {
       if (links) {
        
         const linksInfo = links.map((link, index) => ({
-          text: titulos[index].slice(0),
+          text: titulos[index].slice(),
           href: link,
           file: caminhoDoArquivo,
           broken: false
@@ -36,27 +36,23 @@ function mdLinks(caminhoDoArquivo) {
 function validarLinks(links) {
 
   function requisicao(link) {
-    return new Promise((resolve, reject) => {
-      const resultado = {
+    return fetch(link.href)
+      .then((response) => ({
         href: link.href,
         text: link.text,
         file: link.file,
-      };
-
-      fetch(link.href)// fazer requisições HTTP aos URLs dos links e validar se eles estão funcionando corretamente.
-        .then((response) => {
-          resultado.status = response.status;
-          resultado.ok = response.ok ? 'ok' : 'fail';
-          resultado.broken = !response.ok;
-          resolve(resultado);
-        })
-        .catch((error) => {
-          resultado.status = null;
-          resultado.ok = 'fail';
-          resultado.broken = true;
-          reject(resultado);
-        });
-    });
+        status: response.status,
+        ok: response.ok ? 'ok' : 'fail',
+        broken: !response.ok,
+      }))
+      .catch((error) => ({
+        href: link.href,
+        text: link.text,
+        file: link.file,
+        status: null,
+        ok: 'fail',
+        broken: true,
+      }));
   }
   
   const promessas = links.map(requisicao);
