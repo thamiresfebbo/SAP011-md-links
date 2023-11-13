@@ -19,7 +19,7 @@ function mdLinks(caminhoDoArquivo) {
       if (links) {
        
         const linksInfo = links.map((link, index) => ({
-          text: titulos[index].slice(0, -1),
+          text: titulos[index].slice(0),
           href: link,
           file: caminhoDoArquivo,
           broken: false
@@ -34,7 +34,7 @@ function mdLinks(caminhoDoArquivo) {
 }
 
 function validarLinks(links) {
-  
+
   function requisicao(link) {
     return new Promise((resolve, reject) => {
       const resultado = {
@@ -43,7 +43,7 @@ function validarLinks(links) {
         file: link.file,
       };
 
-      fetch(link.href)//fazer requisições HTTP aos URLs dos links e validar se eles estão funcionando corretamente.
+      fetch(link.href)// fazer requisições HTTP aos URLs dos links e validar se eles estão funcionando corretamente.
         .then((response) => {
           resultado.status = response.status;
           resultado.ok = response.ok ? 'ok' : 'fail';
