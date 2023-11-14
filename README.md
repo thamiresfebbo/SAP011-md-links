@@ -19,6 +19,9 @@ Terceiro projeto desenvolvido para o bootcamp da Laboratótia, com o obejtivo de
 ```
 npm install md-links-thamiresfebbo
 ```
+
+## 3. Comandos
+
 - Para extrair links de um arquivo Markdown em um diretório, execute:
 ```
 md-links nomedodiretorio/nomedoarquivo.md
@@ -32,26 +35,20 @@ md-links nomedodiretorio/nomedoarquivo.md --validate
 ```
 <img src='./assets/validando link.png'>
 
-## 3. Comandos
-
-Reflita e depois enumere os objetivos que quer alcançar e aplique no seu projeto. Pense nisso para decidir sua estratégia de trabalho.
-
 ## 4. Testes
 
-<img src='./assets/validando link.png'>
+<img src='./assets/testes.png'>
 
 ## 5. Checklist
 
 [✔] Instalável via ``` npm ```
 
-[✔] Executável via interface de linha de comando
+[✔] Possui CLI
 
-[✔] Opções para o usuário validar e obter estatísticas sobre links em um diretório
-
-[✔] Opções para o usuário validar e obter estatísticas sobre links de um arquivo
+[✔] O usuário pode visualizar os links e validar 
 
 [✔] O usuário pode visualizar os links quebrados
 
-[✔] Testes unitários cobrem um mínimo de 70% de statements, functions, lines e branches.
+[✔] Testes unitários 
 
 [✔] Package.json: deve possuir nome, versão, descrição, autor, licença, dependências e scripts (pretest, test e etc).
