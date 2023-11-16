@@ -7,7 +7,7 @@
 * [3. Comandos](#3-comando)
 * [4. Testes](#4-teste)
 * [5. Checklist](#5-checklist)
-
+* [6. Referências](#6-referencias)
 
 ***
 
@@ -17,7 +17,7 @@ Terceiro projeto desenvolvido para o bootcamp da Laboratótia, com o obejtivo de
 
 ## 2. Instalação
 ```
-npm install md-links-thamiresfebbo
+npm i md-links-thamiresfebbo
 ```
 
 ## 3. Comandos
@@ -52,3 +52,17 @@ md-links nomedodiretorio/nomedoarquivo.md --validate
 [✔] Testes unitários 
 
 [✔] Package.json: deve possuir nome, versão, descrição, autor, licença, dependências e scripts (pretest, test e etc).
+
+## 6. Referências
+
+Estrutura do código
+[@Alessandra Ribeiro](https://github.com/ribeirober1208)
+
+Configuração CLI, Jest e Package.json
+[Gabriel Ramos](https://gabrieluizramos.com.br/)
+
+Publicar biblioteca NPM
+[Danicuki](https://www.youtube.com/watch?v=PTLisil39Oc&t=468s)
+
+Node.js
+[Curso Matheus Battisti](https://www.udemy.com/course/javascript-do-basico-ao-avancado-com-node-e-projetos/)
