@@ -37,7 +37,7 @@ md-links nomedodiretorio/nomedoarquivo.md --validate
 
 ## 4. Testes
 
-<img src='./assets/testes.png'>
+<img src='./assets/test.png'>
 
 ## 5. Checklist
 
